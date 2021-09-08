@@ -6,8 +6,6 @@
   padding: 0;
 }
 
-.wrapper {}
-
 .header {
   background: url(header/bg/bg.jpg) center center / cover no-repeat;
   height: 1500px;
