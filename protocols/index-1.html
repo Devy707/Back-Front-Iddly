@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>
+      Звіти з лабораторних робіт з дисципліни
+      <span>"Основи Front-End та Back-End розробок"</span>
+    </h1>
+    <div class="info">
+      <p class="item" style="font-weight: 700;">Бригада №4</p>
+      <p class="item">Студент групи:</p>
+      <select class="item" id="mySelect" onchange="fun1()">
+        <option disabled selected value>select an option</option>
+        <option id="ІВ-93" value="ІВ-93">ІВ-93</option>
+        <option id="ІО-93" value="ІО-93">ІО-93</option>
+      </select>
+      <p class="item" id="Name"></p>
+      <div class="image">
+        <img class="first-photo" src="" alt="" />
+        <img class="second-photo" src="" alt="" />
+      </div>
+    </div>
+    <section class="labs">
+      <div class="container">
+        <div class="labs-content">
+          <button class="labs__button">Laboratory work #1</button>
+          <button class="labs__button">Laboratory work #2</button>
+          <button class="labs__button">Laboratory work #3</button>
+          <button class="labs__button">Laboratory work #4</button>
+          <button class="labs__button">Laboratory work #5</button>
+          <button class="labs__button">Laboratory work #6</button>
+          <button class="labs__button">Laboratory work #7</button>
+          <button class="labs__button">Laboratory work #8</button>
+          <button class="labs__button">Laboratory work #9</button>
+        </div>
+      </div>
+    </section>
+    <main class="main_1">
+      <div class="container">
+        <div class="main-content">
+          <div class="left-part">
+            <button class="left-part__item first">Опис предметного середовища</button>
+            <button class="left-part__item second">
+              Тема, Мета, Місце розташування лабораторної роботи
+            </button>
+            <button class="left-part__item third own">Структура документа</button>
+            <button class="left-part__item add fourth">HTML-код таблиць</button>
+            <button class="left-part__item add fifth">HTML-код форми</button>
+            <button class="left-part__item add sixth">HTML-код зоображення</button>
+            <button class="left-part__item seventh">Висновки</button>
+          </div>
+          <div id="right-part">
+             <pre id="code"></pre>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
