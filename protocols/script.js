@@ -134,3 +134,4 @@ buttons[6].addEventListener("click", function () {
    
    `;
 });
+

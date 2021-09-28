@@ -101,9 +101,13 @@ select {
   color: white;
 }
 
-.main_1{
+.main_1 {
   padding-top: 50px;
 }
+.main_2{
+  padding-top: 50px;
+}
+
 
 .main-content{
    display: flex;
@@ -152,4 +156,7 @@ select {
 }
 .main_1{
    display: none;
+}
+.main_2{
+  display: none;
 }
