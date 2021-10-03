@@ -1,5 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-   const slider = new ChiefSlider('.slider', {
-     loop: false
-   });
- });
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  event.preventDefault();
+  const slider = new ChiefSlider('.slider', {
+    loop: true,
+    autoplay: true,
+    interval: 7000,
+  });
+});
