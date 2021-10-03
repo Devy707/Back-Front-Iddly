@@ -19,7 +19,11 @@ let lab1 = document.querySelectorAll('.labs__button')
 let main1 = document.querySelector('.main_1');
 
 lab1[0].addEventListener('click',function(){
-   main1.style.display = 'block';
+   if(main1.style.display === 'none'){
+   main1.style.display = 'block';}
+   else{
+      main1.style.display = 'none'
+   }
 })
 
 buttons[0].addEventListener("click", function () {
