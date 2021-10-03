@@ -1,3 +1,5 @@
-let arr = []
-arr.p = 1
-console.log(arr.length)
+document.addEventListener('DOMContentLoaded', function () {
+   const slider = new ChiefSlider('.slider', {
+     loop: false
+   });
+ });
