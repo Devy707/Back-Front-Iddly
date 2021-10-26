@@ -107,24 +107,24 @@ select {
 .main_2{
   padding-top: 50px;
 }
-
+.main_3{
+  padding-top: 50px;
+}
 
 .main-content{
    display: flex;
    justify-content: space-between;
-   
-
 }
 
 .left-part {
   width: 25%;
 }
 
-.left-part__item.add , .left-part__item-second.add{
+.left-part__item.add, .left-part__item-second.add, .left-part__item-third.add{
   margin-left: 30px;
 }
 
-.left-part__item, .left-part__item-second {
+.left-part__item, .left-part__item-second, .left-part__item-third{
   font-size: 16px;
   width: 350px;
   padding: 20px 20px;
@@ -139,7 +139,7 @@ select {
   cursor: pointer;
 }
 
-.left-part__item:hover, .left-part__item-second:hover{
+.left-part__item:hover, .left-part__item-second:hover, .left-part__item-third:hover{
    background-color: #ffe000;
 }
 
@@ -158,5 +158,8 @@ select {
    display: none;
 }
 .main_2{
+  display: none;
+}
+.main_3{
   display: none;
 }
