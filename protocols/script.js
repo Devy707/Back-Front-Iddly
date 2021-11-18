@@ -13,11 +13,13 @@ function fun1() {
 let buttons = document.getElementsByClassName("left-part__item"); // select for laba#1
 let buttons_2 = document.getElementsByClassName("left-part__item-second"); // select for laba#2
 let buttons_3 = document.getElementsByClassName("left-part__item-third"); // select for laba#3
+let buttons_4 = document.getElementsByClassName("left-part__item-fourth"); // select for laba#4
 let opuc = document.getElementById("code");
 let divText = document.getElementById("right-part");
 let code = document.getElementById("code"); // select for laba#1
 let code_2 = document.getElementById("code_2"); // select for laba#2
 let code_3 = document.getElementById("code_3"); // select for laba#3
+let code_4 = document.getElementById("code_4"); // select for laba#3
 let text = document.querySelector(".text");
 
 
@@ -26,6 +28,9 @@ console.log(lab1);
 let main1 = document.querySelector('.main_1'); // select for laba#1
 let main2 = document.querySelector('.main_2'); // select for laba#2
 let main3 = document.querySelector('.main_3'); // select for laba#3
+let main4 = document.querySelector('.main_4'); // select for laba#4
+
+
 
 // -------------------- By click on labs button number 1 another buttons don't show anything --------------------
 lab1[0].addEventListener('click', function () {
@@ -38,6 +43,7 @@ lab1[0].addEventListener('click', function () {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'none'
+
    }
 })
 // ---------------------------------------------------------------------------------------------------------------
@@ -47,11 +53,14 @@ lab1[1].addEventListener('click', function () {
       main1.style.display = 'none';
       main3.style.display = 'none';
       main2.style.display = 'block';
+      main4.style.display = 'none';
       protocolSecond();
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none'
       main3.style.display = 'none'
+      main4.style.display = 'none';
+
    }
 })
 // ---------------------------------------------------------------------------------------------------------------
@@ -61,11 +70,30 @@ lab1[2].addEventListener('click', function () {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'block';
+      main4.style.display = 'none';
+
       protocolThird();
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none'
       main3.style.display = 'none'
+      main4.style.display = 'none';
+
+   }
+})
+
+lab1[3].addEventListener('click', function () {
+   if (main4.style.display === 'none') {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'block';
+      protocolFourth();
+   } else {
+      main1.style.display = 'none';
+      main2.style.display = 'none'
+      main3.style.display = 'none'
+      main4.style.display = 'none';
    }
 })
 // ------------------------------------------------------------------------------------------------------------------------
@@ -517,7 +545,7 @@ margin: top, right, bottom, left;
 // --------------------------------------------  Work with Buttons info for laba# 3  --------------------------------------
 // ------------------------------------------------------------------------------------------------------------------------
 function protocolThird() {
-   buttons_3[0].addEventListener("click", function() {
+   buttons_3[0].addEventListener("click", function () {
       code_3.innerHTML = `
       Тема: БЛОЧНА ВЕРСТКА HTML-ДОКУМЕНТУ ЗА МАКЕТОМ. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.
 
@@ -530,7 +558,7 @@ function protocolThird() {
       `;
    });
 
-   buttons_3[2].addEventListener("click", function() { // Ivan-layout
+   buttons_3[2].addEventListener("click", function () { // Ivan-layout
       code_3.innerHTML = `
       <img src="../some_images/ivan.png" alt="">
 
@@ -542,7 +570,7 @@ function protocolThird() {
       `;
    });
 
-   buttons_3[3].addEventListener("click", function() { // Bogdan-layout
+   buttons_3[3].addEventListener("click", function () { // Bogdan-layout
       code_3.innerHTML = `
       <img src="../some_images/bogdan.png" alt="">
 
@@ -551,7 +579,7 @@ function protocolThird() {
       `;
    });
 
-   buttons_3[4].addEventListener("click", function() { // Vlad-layout
+   buttons_3[4].addEventListener("click", function () { // Vlad-layout
       code_3.innerHTML = `
       <img src="../some_images/layout_lab3.png" alt="">
       `;
@@ -601,9 +629,44 @@ function protocolThird() {
 
    buttons_3[7].addEventListener("click", function () {
       code_3.textContent = `
-   Тут надо вставить код разметки на флоутах
-   Еще написать надо
-   Бодя скинет --> вставишь
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <header class="header">
+            <div class="white-left"></div>
+            <div class="transparent">
+            <div class="transparent-right">1</div></div>
+         </header>
+         <main class="main-content">
+            <div class="left-blue">2</div>
+            <div class="main-right">
+               <div class="main-header"></div>
+               <div class="main-right__content">
+                  <div class="main-right__content-left">3
+                     <div class="red"></div>
+                  </div>
+                  <div class="main-right__content-right">
+                     4
+                  </div>
+               </div>
+            </div>
+         </main>
+         <footer class="footer">
+            5
+         </footer>
+      </div>
+   </div>
+</body>
+</html>
    `;
    });
 
@@ -1076,30 +1139,226 @@ function protocolThird() {
 
 
 
+function protocolFourth() {
+   buttons_4[0].addEventListener("click", function () {
+      code_4.textContent = `
+      Під час лабораторної роботи ми придбали практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови JavasSript,
+      використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові JavasSript
+      `;
+   });
+
+   buttons_4[2].addEventListener("click", function () { // Ivan-layout
+      code_4.textContent = `
+      <button class="header-content__second button"><a href="JavaScript:alert('Check this button later!');">Download</a></button>
+      `;
+   });
+
+   buttons_4[3].addEventListener("click", function () { // Bogdan-layout
+      code_4.textContent = `
+      <button class="header-content__first button" onclick="alert('Check this button later!');">Learn more</button>
+      `;
+   });
+
+   buttons_4[4].addEventListener("click", function () { // Vlad-layout
+      code_4.textContent = `
+      <script src="script.js"></script>
+      `;
+   });
+
+   buttons_4[5].addEventListener("click", function () {
+      code_4.textContent = `
+'use strict';
+let array = [];
+let arrayB = [];
 
 
+let number;
+let max = 0;
+let maxB = 0;
+function randomInt(min, max) {
+   return Math.floor(Math.random() * (max - min) + min);
+}
 
+function findMaxA() {
+   let count = 0;
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] > count) {
+         count = array[i];
+      }
+   }
+   max = count;
+   document.querySelector('.createB').style.display = 'block';
+   document.querySelector('.header__max').style.display = 'block';
+   document.querySelector('.header__max').innerHTML = max;
 
+}
 
+function findMaxB() {
+   let count = 0;
+   for (let i = 0; i < arrayB.length; i++) {
+      if (arrayB[i] > count) {
+         count = arrayB[i];
+      }
+   }
+   maxB = count;
+}
 
+function setNumber() {
+   number = parseInt(document.querySelector('.header__number').value);
+   if (!isNaN(number) || number > 40) {
+      document.querySelector('.header__array').style.display = 'block';
+      document.querySelector('.header__number').value = number;
+      for (let i = 0; i < number; i++) {
+         array[i] = randomInt(1, number);
+      }
+      document.querySelector('.header__array').innerHTML = 'A = ${'array'}';
+      document.querySelector('.header__find-max').style.display = 'block';
+      console.log(array);
+   }
+}
 
+function createB(){
+   for (let i = 0; i < number; i++) {
+      arrayB[i] = array[i]*max;
+   }
+   document.querySelector('.header__array-b').innerHTML = 'B = ${'arrayB'}';
+   document.querySelector('.header__array-b').style.display = 'block';
+   document.querySelector('.sort__button').style.display = 'block';
+}
+function sortArrayB(){
+   for (let i = 1; i < arrayB.length; i++) {
+      let j = i - 1;
+      let tmp = arrayB[i];
+      while (j >= 0 && arrayB[j] < tmp) {
+        arrayB[j + 1] = arrayB[j];
+        j--;
+      }
+      arrayB[j+1] = tmp;
+    }
+    document.querySelector('.header__sort').style.display = 'block';
+    document.querySelector('.header__sort').innerHTML = '${'arrayB'}';
+}
+   `;
+   });
 
+   buttons_4[6].addEventListener("click", function () {
+      code_4.textContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="calc-wrap">
+      <div id="calc">
+          <textarea id=inputVal>0</textarea>
+      </div>
+  </div> 
+  <script src="script.js"></script>
+</body>
+</html>
+   `;
+   });
 
+   buttons_4[7].addEventListener("click", function () {
+      code_4.textContent = `
+      .btn {
+         width: 60px;
+         height: 60px;
+         background: #fc0;
+         display: inline-block;
+         text-align: center;
+         line-height: 60px;
+         user-select: none;
+      }
+      
+      .btn:hover {
+         background: #f70;
+         color: #fff;
+      }
+      
+      #calc-wrap {
+         padding: 10px;
+         width: 100%;
+         text-align: center;
+         background: #eee;
+      }
+      
+      #calc {
+         width: 240px;
+         display: inline-block;
+      }
+      
+      #inputVal {
+         width: 100%;
+         border: 0;
+         font-size: 16px;
+         resize: vertical;
+      }
+   `;
+   });
 
+   buttons_4[8].addEventListener("click", function () {
+      code_4.textContent = `
+      window.addEventListener('load', function OnWindowLoaded() {
+         let signs = [
+             '1', '2', '3', '+',
+             '4', '5', '6', '-',
+             '7', '8', '9', '/',
+             '0', '=', '.', 'c',
+             '%','*','√'
+         ];
+      
+         let calc = document.getElementById('calc');
+      
+         let textArea = document.getElementById('inputVal');
+      
+         signs.forEach(function (sign) {
+             let signElement = document.createElement('div');
+             signElement.className = 'btn';
+             signElement.innerHTML = sign;
+             calc.appendChild(signElement);
+         });
+      
+         document.querySelectorAll('#calc-wrap .btn').forEach(function (button) {
+             button.addEventListener('click', onButtonClick);
+         });
+      
+         function onButtonClick(e) {
+             if (e.target.innerHTML === 'c') {
+                 textArea.innerHTML = '0';
+             }else if(e.target.innerHTML === '√'){
+               textArea.innerHTML = Math.sqrt(textArea.innerHTML);
+             } else if (e.target.innerHTML === '=') {
+                 textArea.innerHTML = eval(textArea.innerHTML);
+             } else if (textArea.innerHTML === '0') {
+                 textArea.innerHTML = e.target.innerHTML;
+             } else {
+                 textArea.innerHTML += e.target.innerHTML;
+             }
+         }
+      });
+   `;
+   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   buttons_4[9].addEventListener("click", function () {
+      code_4.textContent = `
+Висновки: у даній лабораторній роботі придбали практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови JavasSript,
+ використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові JavasSript.
+Ми виконали всі завдання, а саме: 
+   1) У власному сайті або на окремій WEB-сторінці, використовучі функції , застосували  3 способи функціонального застосування JavaScript:
+      • гіпертекстове посилання (схема URL);
+      • обробник події (handler);
+      • вставка (тег SCRIPT).
+   2) Використовуючи сценарій на JavaScript, виконали завдання. яке приведене у Таблиці №1. 
+   3) Забезпечили виконання завдання згідно із варіантом (Таблиця №2), сформували необхідні дані, вбудовані у програму, у вигляді масивів,
+    виконали тестування програми.
+Кожен з учасників бригади виконував завдання відповідно свого варіанту
+У звіті показано, хто який варіант робив.
+   `;
+   });
+}

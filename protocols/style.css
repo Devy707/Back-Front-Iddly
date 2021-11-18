@@ -111,6 +111,10 @@ select {
   padding-top: 50px;
 }
 
+.main_4{
+  padding-top: 50px;
+}
+
 .main-content{
    display: flex;
    justify-content: space-between;
@@ -120,11 +124,11 @@ select {
   width: 25%;
 }
 
-.left-part__item.add, .left-part__item-second.add, .left-part__item-third.add{
+.left-part__item.add, .left-part__item-second.add, .left-part__item-third.add,.left-part__item-fourth.add{
   margin-left: 30px;
 }
 
-.left-part__item, .left-part__item-second, .left-part__item-third{
+.left-part__item, .left-part__item-second, .left-part__item-third,.left-part__item-fourth{
   font-size: 16px;
   width: 350px;
   padding: 20px 20px;
@@ -139,7 +143,7 @@ select {
   cursor: pointer;
 }
 
-.left-part__item:hover, .left-part__item-second:hover, .left-part__item-third:hover{
+.left-part__item:hover, .left-part__item-second:hover, .left-part__item-third:hover,.left-part__item-fourth:hover{
    background-color: #ffe000;
 }
 
@@ -161,5 +165,9 @@ select {
   display: none;
 }
 .main_3{
+  display: none;
+}
+
+.main_4{
   display: none;
 }
