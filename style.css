@@ -161,6 +161,10 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
+.header-content__buttons .button a{
+  text-decoration: none;
+  color: #fff;
+}
 .header-content__buttons .button:hover {
   background-color: rgb(255, 224, 0);
   border: 2px solid rgb(255, 224, 0);
@@ -923,8 +927,4 @@ tr td:last-child {
   .label-third {
     justify-content: center;
   }
-
-
-
-
 }
