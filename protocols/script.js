@@ -14,12 +14,15 @@ let buttons = document.getElementsByClassName("left-part__item"); // select for 
 let buttons_2 = document.getElementsByClassName("left-part__item-second"); // select for laba#2
 let buttons_3 = document.getElementsByClassName("left-part__item-third"); // select for laba#3
 let buttons_4 = document.getElementsByClassName("left-part__item-fourth"); // select for laba#4
+let buttons_5 = document.getElementsByClassName("left-part__item-fifth"); // select for laba#5
+
 let opuc = document.getElementById("code");
 let divText = document.getElementById("right-part");
 let code = document.getElementById("code"); // select for laba#1
 let code_2 = document.getElementById("code_2"); // select for laba#2
 let code_3 = document.getElementById("code_3"); // select for laba#3
-let code_4 = document.getElementById("code_4"); // select for laba#3
+let code_4 = document.getElementById("code_4"); // select for laba#4
+let code_5 = document.getElementById("code_5"); // select for laba#5
 let text = document.querySelector(".text");
 
 
@@ -29,6 +32,8 @@ let main1 = document.querySelector('.main_1'); // select for laba#1
 let main2 = document.querySelector('.main_2'); // select for laba#2
 let main3 = document.querySelector('.main_3'); // select for laba#3
 let main4 = document.querySelector('.main_4'); // select for laba#4
+let main5 = document.querySelector('.main_5'); // select for laba#5
+
 
 
 
@@ -42,8 +47,7 @@ lab1[0].addEventListener('click', function () {
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none';
-      main3.style.display = 'none'
-
+      main3.style.display = 'none';
    }
 })
 // ---------------------------------------------------------------------------------------------------------------
@@ -57,8 +61,8 @@ lab1[1].addEventListener('click', function () {
       protocolSecond();
    } else {
       main1.style.display = 'none';
-      main2.style.display = 'none'
-      main3.style.display = 'none'
+      main2.style.display = 'none';
+      main3.style.display = 'none';
       main4.style.display = 'none';
 
    }
@@ -71,17 +75,17 @@ lab1[2].addEventListener('click', function () {
       main2.style.display = 'none';
       main3.style.display = 'block';
       main4.style.display = 'none';
-
       protocolThird();
    } else {
       main1.style.display = 'none';
-      main2.style.display = 'none'
-      main3.style.display = 'none'
+      main2.style.display = 'none';
+      main3.style.display = 'none';
       main4.style.display = 'none';
 
    }
 })
-
+// ---------------------------------------------------------------------------------------------------------------
+// -------------------- By click on labs button number 4 another buttons don't show anything --------------------
 lab1[3].addEventListener('click', function () {
    if (main4.style.display === 'none') {
       main1.style.display = 'none';
@@ -91,9 +95,27 @@ lab1[3].addEventListener('click', function () {
       protocolFourth();
    } else {
       main1.style.display = 'none';
-      main2.style.display = 'none'
-      main3.style.display = 'none'
+      main2.style.display = 'none';
+      main3.style.display = 'none';
       main4.style.display = 'none';
+   }
+})
+// ---------------------------------------------------------------------------------------------------------------
+// -------------------- By click on labs button number 5 another buttons don't show anything --------------------
+lab1[4].addEventListener('click', function () {
+   if (main5.style.display === 'none') {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'block';
+      protocolFifth();
+   } else {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
    }
 })
 // ------------------------------------------------------------------------------------------------------------------------
@@ -1136,9 +1158,9 @@ function protocolThird() {
    `;
    });
 }
-
-
-
+// ------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------  Work with Buttons info for laba# 4  --------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------
 function protocolFourth() {
    buttons_4[0].addEventListener("click", function () {
       code_4.textContent = `
@@ -1362,3 +1384,210 @@ function sortArrayB(){
    `;
    });
 }
+// ------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------  Work with Buttons info for laba# 5  --------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------
+function protocolFifth() {
+   buttons_5[0].addEventListener("click", function () {
+      code_5.textContent = `
+      Тема: ВИКОРИСТАННЯ В СЦЕНАРІЯХ JAVASCRIPT БІБЛІОТЕК КРОС-БРАУЗЕРНИХ ІНТЕРФЕЙСІВ МЕТОДІВ DOM.  БІБЛІОТЕКА JQUERY UI.
+      ЗАСОБИ НАЛАГОДЖЕННЯ І ТЕСТУВАННЯ СЦЕНАРІЇВ JAVASCRIPT.
+      
+      Мета: придбати практичні навички роботи jQuery UI, вміти додавати до сайту 
+      динамічні елементи цієї бібіліотеки, плагін галереї UniteGallery, 
+      кнопки соціальних мереж, інформери та інше.
+      `;
+   });
+
+   buttons_5[1].addEventListener("click", function () { // Ivan-layout
+      code_5.textContent = `
+      $(function (){
+         $('.accordion').accordion();  // use accordion
+      
+         var avilableNames = [
+            "Иван",
+            "Артём",
+            "Никита",
+            "Ярослав",
+            "Анастасия",
+            "Людмила",
+            "Светлана",
+            "Ирина",
+            "Владимир",
+            "Владислав",
+          ];
+          var avilableFathernames = [
+            "Иванович",
+            "Владимирович",
+            "Николаевич",
+            "Олександрович",
+            "Иллич",
+            "Станиславович",
+            "Игоревич",
+            "Андреевич",
+            "Андреевна",
+            "Владимировна",
+          ];
+         $('input[name = "text1"]').autocomplete({
+            source: avilableNames
+         });
+         $('input[name = "text3"]').autocomplete({
+            source: avilableFathernames
+         });
+         $('#datepicker').datepicker();
+      `;
+   });
+
+   buttons_5[3].addEventListener("click", function () { // Bogdan-layout
+      code_5.textContent = `
+            // Галерея
+         $('.small a').click(function(e){
+            if ($('.big img').attr('src') !== $(this).attr('href')){
+               $('.big img').hide().attr('src', $(this).attr('href')).fadeIn(1000);
+            }
+            e.preventDefault();
+      })
+      $('.button').click(function(){
+            $('.gallery').slideToggle(500);
+            if ($('.button').text() === '-'){
+               $('.button').text('+');
+            } else{
+               $('.button').text('-');
+            }
+      })
+      $('.small a img').click(function(){
+            $('.small a img').fadeTo(500, 1).css({
+               'border': 'none',
+            })
+            $(this).fadeTo(500, 0.6).css({
+               'border': '1px dotted red',
+            })
+      })
+      `;
+   });
+
+   buttons_5[4].addEventListener("click", function () { // Vlad-layout
+      code_5.textContent = `
+            // Галерея
+         $('.small a').click(function(e){
+            if ($('.big img').attr('src') !== $(this).attr('href')){
+               $('.big img').hide().attr('src', $(this).attr('href')).fadeIn(1000);
+            }
+            e.preventDefault();
+      })
+      $('.button').click(function(){
+            $('.gallery').slideToggle(500);
+            if ($('.button').text() === '-'){
+               $('.button').text('+');
+            } else{
+               $('.button').text('-');
+            }
+      })
+      $('.small a img').click(function(){
+            $('.small a img').fadeTo(500, 1).css({
+               'border': 'none',
+            })
+            $(this).fadeTo(500, 0.6).css({
+               'border': '1px dotted red',
+            })
+      })
+      `;
+   });
+
+   buttons_5[5].addEventListener("click", function () {
+      code_5.textContent = `
+      // Видео-слайдер
+   var pos = 0,
+        slides = $('.slide'),
+        numOfSlides = slides.length;
+
+    function nextSlide() {
+        // [] returns a vanilla DOM object from a jQuery object/collection
+        slides[pos].video.stopVideo()
+        slides.eq(pos).animate({ left: '-100%' }, 500);
+        pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
+        slides.eq(pos).css({ left: '100%' }).animate({ left: 0 }, 500);
+    }
+
+    function previousSlide() {
+        slides[pos].video.stopVideo()
+        slides.eq(pos).animate({ left: '100%' }, 500);
+        pos = (pos == 0 ? numOfSlides - 1 : --pos);
+        slides.eq(pos).css({ left: '-100%' }).animate({ left: 0 }, 500);
+    }
+      `;
+   });
+
+   buttons_5[6].addEventListener("click", function () {
+      code_5.textContent = `
+      HTML код
+
+      <footer class="social__networks">
+         <div class="btn__social__networks">
+            <div class="sm-container">
+               <i class="show-btn fas fa-user"></i>
+               <div class="sm-menu">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-whatsapp"></i></a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      JQuery код
+
+      $('.left').click(previousSlide);
+      $('.right').click(nextSlide);
+  
+      $('.show-btn').click(function(){
+        $('.sm-menu').fadeToggle("fast");
+      });
+   `;
+   });
+
+   buttons_5[7].addEventListener("click", function () {
+      code_5.textContent = `
+      Тут інформери которые я не сделал
+      `;
+   });
+
+   buttons_5[8].addEventListener("click", function () { // Ivan-layout
+      code_5.innerHTML = `
+      Висновки: у даній лабораторній роботі ми придбали практичні навички роботи з бібліотекою jQuery та jQuery UI.
+
+      Навчилияс користуватися документацією бібліотеки https://jqueryui.com/  та додали до сайту по 2-3 динамічних елементи, що наведені в переліку:
+      o	Accordion - набір елементів, що розгортаються/згортаються.
+      o	Datepicker - вибір дати з календаря.
+      o	Menu – випадне меню.
+      o	Slider - вибір числа за допомогою повзунка.
+      o	Tabs - організація вкладок на сторінці.
+      o	Tooltip - організація спливаючих підказок.
+
+      Попрацювали з плагіном галереї UniteGallery та зробили фотогалерею
+      з можливістю перегляду збільшених зображень, а також: слайдер фотографій та слайдер відеоматеріалів
+      
+      Додали до сайту кнопки соціальних мереж: Facebook, Twitter, Instagram і тд.
+      Додали до сайту інформери. Такі як курс валют або погода.
+
+
+      Звіт роботи студента Гулака Івана
+      Посилання на роботу студента.
+      Репозиторій на GitHub: <a target="_blank" href="https://github.com/ivanhulak/my_projects_VERSTKA/tree/master/lab5_WEB_learn_jQuery">https://github.com/ivanhulak/my_projects_VERSTKA/tree/master/lab5_WEB_learn_jQuery</a>
+      
+      Або одразу переглянути роботу: <a target="_blank" href="https://ivanhulak.github.io/my_projects_VERSTKA/lab5_WEB_learn_jQuery/">Тут можна переглянути роботу за допомогою сервісу GitHub Pages</a>
+      
+      Звіт роботи студента Стеценка Богдана
+      Посилання на роботу студента.
+      Репозиторій на GitHub: <a target="_blank" href="ССилка">ССилка</a>
+
+      Звіт роботи студента Губенка Владислава
+      Посилання на роботу студента.
+      Репозиторій на GitHub: <a target="_blank" href="ССилка">ССилка</a>
+      `;
+   });
+}
+
+
