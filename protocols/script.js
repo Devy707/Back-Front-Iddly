@@ -15,7 +15,8 @@ let buttons_2 = document.getElementsByClassName("left-part__item-second"); // se
 let buttons_3 = document.getElementsByClassName("left-part__item-third"); // select for laba#3
 let buttons_4 = document.getElementsByClassName("left-part__item-fourth"); // select for laba#4
 let buttons_5 = document.getElementsByClassName("left-part__item-fifth"); // select for laba#5
-
+let buttons_6 = document.getElementsByClassName("left-part__item-sixth"); // select for laba#6
+let buttons_7 = document.getElementsByClassName("left-part__item-seventh"); // select for laba#7
 let opuc = document.getElementById("code");
 let divText = document.getElementById("right-part");
 let code = document.getElementById("code"); // select for laba#1
@@ -23,6 +24,8 @@ let code_2 = document.getElementById("code_2"); // select for laba#2
 let code_3 = document.getElementById("code_3"); // select for laba#3
 let code_4 = document.getElementById("code_4"); // select for laba#4
 let code_5 = document.getElementById("code_5"); // select for laba#5
+let code_6 = document.getElementById("code_6"); // select for laba#6
+let code_7 = document.getElementById("code_7"); // select for laba#7
 let text = document.querySelector(".text");
 
 
@@ -33,7 +36,8 @@ let main2 = document.querySelector('.main_2'); // select for laba#2
 let main3 = document.querySelector('.main_3'); // select for laba#3
 let main4 = document.querySelector('.main_4'); // select for laba#4
 let main5 = document.querySelector('.main_5'); // select for laba#5
-
+let main6 = document.querySelector('.main_6'); // select for laba#6
+let main7 = document.querySelector('.main_7'); // select for laba#6
 
 
 
@@ -116,6 +120,44 @@ lab1[4].addEventListener('click', function () {
       main3.style.display = 'none';
       main4.style.display = 'none';
       main5.style.display = 'none';
+   }
+})
+lab1[5].addEventListener('click', function () {
+   if (main6.style.display === 'none') {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'block';
+      protocolSixth();
+   } else {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+   }
+})
+lab1[6].addEventListener('click', function () {
+   if (main6.style.display === 'none') {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'block';
+      protocolSeventh();
+   } else {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
    }
 })
 // ------------------------------------------------------------------------------------------------------------------------
@@ -1400,157 +1442,56 @@ function protocolFifth() {
    });
 
    buttons_5[1].addEventListener("click", function () { // Ivan-layout
-      code_5.textContent = `
-      $(function (){
-         $('.accordion').accordion();  // use accordion
-      
-         var avilableNames = [
-            "Иван",
-            "Артём",
-            "Никита",
-            "Ярослав",
-            "Анастасия",
-            "Людмила",
-            "Светлана",
-            "Ирина",
-            "Владимир",
-            "Владислав",
-          ];
-          var avilableFathernames = [
-            "Иванович",
-            "Владимирович",
-            "Николаевич",
-            "Олександрович",
-            "Иллич",
-            "Станиславович",
-            "Игоревич",
-            "Андреевич",
-            "Андреевна",
-            "Владимировна",
-          ];
-         $('input[name = "text1"]').autocomplete({
-            source: avilableNames
-         });
-         $('input[name = "text3"]').autocomplete({
-            source: avilableFathernames
-         });
-         $('#datepicker').datepicker();
+      code_5.innerHTML = `
+      <pre>$(function () {
+         $("#datepicker").datepicker();
+         $('#menu').menu();
+         $('#accordion').accordion();
+         $("#gallery").unitegallery();
+         $( ".widget input[type=submit], .widget a, .widget button" ).button();
+    $( "button, input, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+      });</pre>
+   <img src="../protocols-images/Снимок2.png"> 
+   <img src="../protocols-images/Снимок1.png"> 
       `;
    });
 
    buttons_5[3].addEventListener("click", function () { // Bogdan-layout
-      code_5.textContent = `
-            // Галерея
-         $('.small a').click(function(e){
-            if ($('.big img').attr('src') !== $(this).attr('href')){
-               $('.big img').hide().attr('src', $(this).attr('href')).fadeIn(1000);
-            }
-            e.preventDefault();
-      })
-      $('.button').click(function(){
-            $('.gallery').slideToggle(500);
-            if ($('.button').text() === '-'){
-               $('.button').text('+');
-            } else{
-               $('.button').text('-');
-            }
-      })
-      $('.small a img').click(function(){
-            $('.small a img').fadeTo(500, 1).css({
-               'border': 'none',
-            })
-            $(this).fadeTo(500, 0.6).css({
-               'border': '1px dotted red',
-            })
-      })
+      code_5.innerHTML = `
+         <img src="../protocols-images/slider-code.png">
+         <img src="../protocols-images/Снимокbig.png">
       `;
    });
 
    buttons_5[4].addEventListener("click", function () { // Vlad-layout
-      code_5.textContent = `
-            // Галерея
-         $('.small a').click(function(e){
-            if ($('.big img').attr('src') !== $(this).attr('href')){
-               $('.big img').hide().attr('src', $(this).attr('href')).fadeIn(1000);
-            }
-            e.preventDefault();
-      })
-      $('.button').click(function(){
-            $('.gallery').slideToggle(500);
-            if ($('.button').text() === '-'){
-               $('.button').text('+');
-            } else{
-               $('.button').text('-');
-            }
-      })
-      $('.small a img').click(function(){
-            $('.small a img').fadeTo(500, 1).css({
-               'border': 'none',
-            })
-            $(this).fadeTo(500, 0.6).css({
-               'border': '1px dotted red',
-            })
-      })
+      code_5.innerHTML = `
+      <img src="../protocols-images/second-code.png">
+      <img src="../protocols-images/second-slider-example.png">
       `;
    });
 
    buttons_5[5].addEventListener("click", function () {
-      code_5.textContent = `
-      // Видео-слайдер
-   var pos = 0,
-        slides = $('.slide'),
-        numOfSlides = slides.length;
-
-    function nextSlide() {
-        // [] returns a vanilla DOM object from a jQuery object/collection
-        slides[pos].video.stopVideo()
-        slides.eq(pos).animate({ left: '-100%' }, 500);
-        pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
-        slides.eq(pos).css({ left: '100%' }).animate({ left: 0 }, 500);
-    }
-
-    function previousSlide() {
-        slides[pos].video.stopVideo()
-        slides.eq(pos).animate({ left: '100%' }, 500);
-        pos = (pos == 0 ? numOfSlides - 1 : --pos);
-        slides.eq(pos).css({ left: '-100%' }).animate({ left: 0 }, 500);
-    }
+      code_5.innerHTML = `
+      <img src="../protocols-images/third-ex.png">
+      <img class="third-slider-ex" src="../protocols-images/third-slider-example.png">
       `;
    });
 
    buttons_5[6].addEventListener("click", function () {
-      code_5.textContent = `
-      HTML код
-
-      <footer class="social__networks">
-         <div class="btn__social__networks">
-            <div class="sm-container">
-               <i class="show-btn fas fa-user"></i>
-               <div class="sm-menu">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-youtube"></i></a>
-                  <a href="#"><i class="fab fa-whatsapp"></i></a>
-               </div>
-            </div>
-         </div>
-      </footer>
-
-      JQuery код
-
-      $('.left').click(previousSlide);
-      $('.right').click(nextSlide);
-  
-      $('.show-btn').click(function(){
-        $('.sm-menu').fadeToggle("fast");
-      });
+      code_5.innerHTML = `
+      <img src="../protocols-images/buttons-image.png">
+      <img class="butt-ex" src="../protocols-images/butt-ex.png">
    `;
    });
 
    buttons_5[7].addEventListener("click", function () {
-      code_5.textContent = `
-      Тут інформери которые я не сделал
+      code_5.innerHTML = `
+      <img src="../protocols-images/info-dollar-code.png">
+      <img src="../protocols-images/info-dollar-code-ex.png">
+      <img src="../protocols-images/info-clock-code.png">
+      <img src="../protocols-images/info-clock-ex.png">
       `;
    });
 
@@ -1571,23 +1512,89 @@ function protocolFifth() {
       
       Додали до сайту кнопки соціальних мереж: Facebook, Twitter, Instagram і тд.
       Додали до сайту інформери. Такі як курс валют або погода.
+      `;
+   });
+}
 
-
-      Звіт роботи студента Гулака Івана
-      Посилання на роботу студента.
-      Репозиторій на GitHub: <a target="_blank" href="https://github.com/ivanhulak/my_projects_VERSTKA/tree/master/lab5_WEB_learn_jQuery">https://github.com/ivanhulak/my_projects_VERSTKA/tree/master/lab5_WEB_learn_jQuery</a>
+function protocolSixth() {
+   buttons_6[0].addEventListener("click", function () {
+      code_6.textContent = `
+      Тема: WEB-СЕРВЕРИ ТА ПРИНЦИПИ ЇХ РОБОТИ З КОРИСТУВАЧЕМ. 
+      СЕРВЕРНІ WEB-ЗАСТОСУВАННЯ.
       
-      Або одразу переглянути роботу: <a target="_blank" href="https://ivanhulak.github.io/my_projects_VERSTKA/lab5_WEB_learn_jQuery/">Тут можна переглянути роботу за допомогою сервісу GitHub Pages</a>
-      
-      Звіт роботи студента Стеценка Богдана
-      Посилання на роботу студента.
-      Репозиторій на GitHub: <a target="_blank" href="ССилка">ССилка</a>
-
-      Звіт роботи студента Губенка Владислава
-      Посилання на роботу студента.
-      Репозиторій на GitHub: <a target="_blank" href="ССилка">ССилка</a>
+      Мета: придбати практичні навички встановлення та конфігурування WEB-сервера, встановлення та налаштування Apache
       `;
    });
 }
 
 
+function protocolSeventh() {
+   buttons_7[0].addEventListener("click", function () {
+      code_7.textContent = `
+      Тема: ВЗАЄМОДІЯ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗАМИ ДАНИХ (СКБД). ОБРОБКА РЕЗУЛЬТАТІВ SQL-ЗАПИТІВ У PHP-СЦЕНАРІЇ.
+
+      
+      Мета: придбати практичні навички підключення до СКБД, вибора бази даних, виконання запиту, отримання результатів, відключення від СКБД
+      `;
+   });
+
+   buttons_7[1].addEventListener("click", function () { // Ivan-layout
+      code_7.textContent = `
+      Об'єкти предметної галузі представлені у вигляді ноутбуків з певними полями. Хожен ноутбук є унікальним. 
+      Множиною об'єктів є множина ноутбуків. Їх властивості прописані у таблиці відповідно.
+      `;
+   });
+
+   buttons_7[2].addEventListener("click", function () { // Bogdan-layout
+      code_7.innerHTML = `
+         <img src="../protocols-images/inf-model.png">
+         Кожен ноутбук буде мати свої певні поля:
+         - айді
+         - назва
+         - модель
+         - ціна
+         Усі ці поля були обрано відповідно до магазинів, де ці ноутбуки продаються.
+      `;
+   });
+
+   buttons_7[3].addEventListener("click", function () { // Vlad-layout
+      code_7.innerHTML = `
+      <img src="../protocols-images/dat-model.png">
+      <pre>
+      Відповідні поля біли створені з певними умовами, наприклад:
+      - Поле ID є обов'язковим.
+      - name э VARCHAR з максимальною кількістю символів = 100, так само і model
+      - int це число з максимальною кількістю нулів = 6.
+      id 	INT(7)	 	PRIMARY KEY AUTO_INCREMENT	
+      name	VARCHAR (100) 	NOT NULL 
+      model	VARCHAR (100)  NOT NULL 
+      price	INT(6)	NOT NULL 
+      </pre>
+      `;
+   });
+
+   buttons_7[4].addEventListener("click", function () {
+      code_7.innerHTML = `
+      <img src="../protocols-images/bd1.png">
+      <img class="third-slider-ex" src="../protocols-images/bd2.png">
+      `;
+   });
+
+   buttons_7[5].addEventListener("click", function () {
+      code_7.innerHTML = `
+      <img src="../protocols-images/last.png">
+   `;
+   });
+
+   buttons_7[6].addEventListener("click", function () { // Ivan-layout
+      code_7.textContent = `
+      Висновки: у даній лабораторній роботі ми придбали практичні навички підключення до СКБД, вибора бази даних, виконання запиту, 
+      отримання результатів, відключення від СКБД
+      було додано до сайту базу даних комп. техныки.
+      Відповідно до варіанту індивідуального завдання Таблиці №1 було зроблено: 
+      визначено класи об’єктів предметної області, дані  які будуть зберігатися у БД; 
+      створено інфологічну модель; 
+      нормалізувано реляційну базу та створено датологічну модель; 
+      `;
+   });
+}

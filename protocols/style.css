@@ -24,6 +24,7 @@ h1 span {
   text-transform: uppercase;
 
 }
+
 .info {
   display: flex;
   justify-content: center;
@@ -31,6 +32,7 @@ h1 span {
   text-transform: uppercase;
 
 }
+
 .item {
   padding: 10px 10px;
   border-right: 4px solid #ffe000;
@@ -68,6 +70,7 @@ select {
   width: 100px;
   height: 100px;
 }
+
 .second-photo {
   border: 2px solid #ffe000;
   width: 100px;
@@ -102,22 +105,32 @@ select {
 .main_1 {
   padding-top: 50px;
 }
-.main_2{
-  padding-top: 50px;
-}
-.main_3{
-  padding-top: 50px;
-}
-.main_4{
-  padding-top: 50px;
-}
-.main_5{
+
+.main_2 {
   padding-top: 50px;
 }
 
-.main-content{
-   display: flex;
-   justify-content: space-between;
+.main_3 {
+  padding-top: 50px;
+}
+
+.main_4 {
+  padding-top: 50px;
+}
+
+.main_5 {
+  padding-top: 50px;
+}
+.main_6 {
+  padding-top: 50px;
+}
+.main_7{
+  padding-top: 50px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-part {
@@ -128,7 +141,9 @@ select {
 .left-part__item-second.add,
 .left-part__item-third.add,
 .left-part__item-fourth.add,
-.left-part__item-fifth.add{
+.left-part__item-fifth.add,
+.left-part__item-sixth.add,
+.left-part__item-seventh.add {
   margin-left: 30px;
 }
 
@@ -136,7 +151,9 @@ select {
 .left-part__item-second,
 .left-part__item-third,
 .left-part__item-fourth,
-.left-part__item-fifth{
+.left-part__item-fifth,
+.left-part__item-sixth,
+.left-part__item-seventh {
   font-size: 16px;
   width: 350px;
   padding: 20px 20px;
@@ -155,33 +172,55 @@ select {
 .left-part__item-second:hover,
 .left-part__item-third:hover,
 .left-part__item-fourth:hover,
-.left-part__item-fifth:hover{
-   background-color: #ffe000;
+.left-part__item-fifth:hover,
+.left-part__item-sixth:hover,
+.left-part__item-seventh:hover {
+  background-color: #ffe000;
 }
 
-#right-part{
-   width: 75%;
-   border:2px solid #ffe000;
-   border-radius: 10px;
-   padding: 10px 20px;
+#right-part {
+  width: 75%;
+  border: 2px solid #ffe000;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
 
-.own{
-   background-color:#ffe000;
-   cursor:inherit;
+.own {
+  background-color: #ffe000;
+  cursor: inherit;
 }
-.main_1{
-   display: none;
-}
-.main_2{
+
+.main_1 {
   display: none;
 }
-.main_3{
+
+.main_2 {
   display: none;
 }
-.main_4{
+
+.main_3 {
   display: none;
 }
-.main_5{
+
+.main_4 {
   display: none;
+}
+
+.main_5 {
+  display: none;
+}
+
+.main_6 {
+  display: none;
+}
+.main_7 {
+  display: none;
+}
+
+.third-slider-ex {
+  width: 80%;
+}
+
+.butt-ex {
+  width: 50%;
 }
