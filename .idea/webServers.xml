@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b088ece5-8fda-41fc-a5e5-dff17bb1005d" name="localhost" url="http://localhost/reg">
+        <fileTransfer mountedRoot="D:\OpenServer\domains\Back-Front-Iddly\reg" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

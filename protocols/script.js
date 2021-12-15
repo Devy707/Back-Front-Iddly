@@ -17,6 +17,8 @@ let buttons_4 = document.getElementsByClassName("left-part__item-fourth"); // se
 let buttons_5 = document.getElementsByClassName("left-part__item-fifth"); // select for laba#5
 let buttons_6 = document.getElementsByClassName("left-part__item-sixth"); // select for laba#6
 let buttons_7 = document.getElementsByClassName("left-part__item-seventh"); // select for laba#7
+let buttons_8 = document.getElementsByClassName("left-part__item-eights_ninth"); // select for laba#7
+
 let opuc = document.getElementById("code");
 let divText = document.getElementById("right-part");
 let code = document.getElementById("code"); // select for laba#1
@@ -26,6 +28,7 @@ let code_4 = document.getElementById("code_4"); // select for laba#4
 let code_5 = document.getElementById("code_5"); // select for laba#5
 let code_6 = document.getElementById("code_6"); // select for laba#6
 let code_7 = document.getElementById("code_7"); // select for laba#7
+let code_8_9 = document.getElementById("code_8_9"); // select for laba#7
 let text = document.querySelector(".text");
 
 
@@ -38,6 +41,7 @@ let main4 = document.querySelector('.main_4'); // select for laba#4
 let main5 = document.querySelector('.main_5'); // select for laba#5
 let main6 = document.querySelector('.main_6'); // select for laba#6
 let main7 = document.querySelector('.main_7'); // select for laba#6
+let main_8_9 = document.querySelector('.main_8_9'); // select for laba#6
 
 
 
@@ -46,12 +50,23 @@ lab1[0].addEventListener('click', function () {
    if (main1.style.display === 'none') {
       main2.style.display = 'none';
       main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
       main1.style.display = 'block';
       protocolFirst();
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
+
    }
 })
 // ---------------------------------------------------------------------------------------------------------------
@@ -60,14 +75,22 @@ lab1[1].addEventListener('click', function () {
    if (main2.style.display === 'none') {
       main1.style.display = 'none';
       main3.style.display = 'none';
-      main2.style.display = 'block';
       main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
+      main2.style.display = 'block';
       protocolSecond();
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'none';
       main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
 
    }
 })
@@ -77,14 +100,22 @@ lab1[2].addEventListener('click', function () {
    if (main3.style.display === 'none') {
       main1.style.display = 'none';
       main2.style.display = 'none';
-      main3.style.display = 'block';
       main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
+      main3.style.display = 'block';
       protocolThird();
    } else {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'none';
       main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
 
    }
 })
@@ -95,6 +126,10 @@ lab1[3].addEventListener('click', function () {
       main1.style.display = 'none';
       main2.style.display = 'none';
       main3.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
       main4.style.display = 'block';
       protocolFourth();
    } else {
@@ -102,6 +137,10 @@ lab1[3].addEventListener('click', function () {
       main2.style.display = 'none';
       main3.style.display = 'none';
       main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
    }
 })
 // ---------------------------------------------------------------------------------------------------------------
@@ -112,6 +151,9 @@ lab1[4].addEventListener('click', function () {
       main2.style.display = 'none';
       main3.style.display = 'none';
       main4.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
       main5.style.display = 'block';
       protocolFifth();
    } else {
@@ -120,6 +162,9 @@ lab1[4].addEventListener('click', function () {
       main3.style.display = 'none';
       main4.style.display = 'none';
       main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
    }
 })
 lab1[5].addEventListener('click', function () {
@@ -129,6 +174,8 @@ lab1[5].addEventListener('click', function () {
       main3.style.display = 'none';
       main4.style.display = 'none';
       main5.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
       main6.style.display = 'block';
       protocolSixth();
    } else {
@@ -138,6 +185,8 @@ lab1[5].addEventListener('click', function () {
       main4.style.display = 'none';
       main5.style.display = 'none';
       main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
    }
 })
 lab1[6].addEventListener('click', function () {
@@ -148,6 +197,7 @@ lab1[6].addEventListener('click', function () {
       main4.style.display = 'none';
       main5.style.display = 'none';
       main6.style.display = 'none';
+      main_8_9.style.display = 'none';
       main7.style.display = 'block';
       protocolSeventh();
    } else {
@@ -158,6 +208,29 @@ lab1[6].addEventListener('click', function () {
       main5.style.display = 'none';
       main6.style.display = 'none';
       main7.style.display = 'none';
+      main_8_9.style.display = 'none';
+   }
+})
+lab1[7].addEventListener('click', function () {
+   if (main_8_9.style.display === 'none') {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main_8_9.style.display = 'block';
+      main7.style.display = 'none';
+      protocolEighth();
+   } else {
+      main1.style.display = 'none';
+      main2.style.display = 'none';
+      main3.style.display = 'none';
+      main4.style.display = 'none';
+      main5.style.display = 'none';
+      main6.style.display = 'none';
+      main7.style.display = 'none';
+      main_8_9.style.display = 'none';
    }
 })
 // ------------------------------------------------------------------------------------------------------------------------
@@ -1527,6 +1600,94 @@ function protocolSixth() {
    });
 }
 
+
+function protocolEighth() {
+   buttons_8[0].addEventListener("click", function () {
+      code_8_9.innerHTML = `
+      Тема: ІНТЕРФЕЙСИ ВЗАЄМОДІЇ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗ ДАНИХ (СКБД). SQL-ЗАПИТИ У PHP-СЦЕНАРІЯХ. <br>
+      ІНТЕРФЕЙСИ WEB-ЗАСТОСУВАНЬ з СКБД. ВИКОРИСТАННЯ СЕСІЙ І COOKIES  В СЦЕНАРІЯХ АВТОРИЗАЦІЇ. 
+      РОЗРОБКА СЦЕНАРІЇВ ОБРОБКИ ДАНИХ З ФАЙЛІВ.<br>
+      <br><br>
+      Мета: придбати практичні навички роботи взаємодії WEB- застосувань з СКБД, використання сесій і cookies  в сценаріях авторизації,
+      розробки сценаріїв обробки даних з файлів.<br>
+      `;
+   });
+
+   buttons_8[1].addEventListener("click", function () { // Ivan-layout
+      code_8_9.innerHTML = `
+      Тема: АСИНХРОННА ВЗАЄМОДІЯ КЛІЄНТСЬКОЇ І СЕРВЕРНОЇ ЧАСТИН WEB- ЗАСТОСУВАНЬ З ВИКОРИСТАННЯМ ТЕХНОЛОГІЇ AJAX.
+      ФОРМУВАННЯ AJAX-ЗАПИТУ ЗАСОБАМИ JQUERY.<br> <br>
+
+      Мета: придбати практичні навички роботи основ асинхронного обміну даними мовою JavaScript за допомогою технології Ajax та бібліотеки Jquery, <br>
+      формування  Аjax-запиту засобами jQuery при реалізації практичних задач Web-програмування. <br>
+
+      `;
+   });
+
+   buttons_8[2].addEventListener("click", function () { // Bogdan-layout
+      code_8_9.innerHTML = `
+         <img src="../protocols-images/ajax1.png">
+         <img src="../protocols-images/ajax2.png">
+
+      `;
+   });
+
+   buttons_8[3].addEventListener("click", function () { // Vlad-layout
+      code_8_9.innerHTML = `
+      <ul>
+      <h1>Список функціоналу сайту</h1>
+      <li>Меню</li>
+      <li>Слайдер(галерея)</li>
+      <li>Форма звязку</li>
+      <li>Зміст постів</li>
+      <li>Система рейтингу</li>
+      <li>Авторизація</li>
+      <li>Зміна мови</li>
+      <li>Регестрація</li>
+      </ul>
+
+      `;
+   });
+
+   buttons_8[4].addEventListener("click", function () {
+      code_8_9.innerHTML = ` У порівнянні з першою лабораторною роботою наш сайт доволі сильно змінився.<br> Ми зробили його повністю адаптивним, додали певний функціонал, який ви можете переглянути, нажавши попередню кнопку.<br>
+До сайту також була додана зміна мови, авторизація та регестрація тощо. Усе це ви можете переглянути на головній сторінці сайту <a href="../index.html">Головна сторінка</a>
+      `;
+   });
+
+   buttons_8[5].addEventListener("click", function () {
+      code_8_9.innerHTML = `
+      <img src="../protocols-images/changelang-eng.PNG">
+      <img style="width:80%;" src="../protocols-images/changelang-rus.PNG">
+
+   `;
+   });
+
+   buttons_8[6].addEventListener("click", function () { // Ivan-layout
+      code_8_9.innerHTML = `
+      <img src="../protocols-images/login1.PNG">
+      <img src="../protocols-images/login2.PNG">
+      <img src="../protocols-images/login3.PNG">
+      `;
+   });
+   buttons_8[7].addEventListener("click", function () { // Ivan-layout
+      code_8_9.innerHTML = `
+      <img style="width:90%;" src="../protocols-images/db.PNG">
+      `;
+   });
+   buttons_8[8].addEventListener("click", function () { // Ivan-layout
+      code_8_9.innerHTML = `
+      <img style="width:90%;" src="../protocols-images/dt.PNG">
+      `;
+   });
+   buttons_8[9].addEventListener("click", function () { // Ivan-layout
+      code_8_9.innerHTML = `
+      Під час лабораторних робіт ми придбали практичні навички роботи взаємодії WEB- застосувань з СКБД,<br> використання сесій і cookies  в сценаріях авторизації,
+      розробки сценаріїв обробки даних з файлів.<br> Також ми придбали практичні навички роботи основ асинхронного обміну даними мовою JavaScript за допомогою технології Ajax та бібліотеки Jquery, <br>
+      формування  Аjax-запиту засобами jQuery при реалізації практичних задач Web-програмування. <br>
+      `;
+   });
+}
 
 function protocolSeventh() {
    buttons_7[0].addEventListener("click", function () {

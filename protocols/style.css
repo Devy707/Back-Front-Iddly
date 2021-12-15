@@ -127,6 +127,9 @@ select {
 .main_7{
   padding-top: 50px;
 }
+.main_8_9{
+  padding-top: 50px;
+}
 
 .main-content {
   display: flex;
@@ -143,7 +146,7 @@ select {
 .left-part__item-fourth.add,
 .left-part__item-fifth.add,
 .left-part__item-sixth.add,
-.left-part__item-seventh.add {
+.left-part__item-seventh.add,.left-part__item-eights_ninth.add {
   margin-left: 30px;
 }
 
@@ -153,7 +156,7 @@ select {
 .left-part__item-fourth,
 .left-part__item-fifth,
 .left-part__item-sixth,
-.left-part__item-seventh {
+.left-part__item-seventh,.left-part__item-eights_ninth {
   font-size: 16px;
   width: 350px;
   padding: 20px 20px;
@@ -174,7 +177,7 @@ select {
 .left-part__item-fourth:hover,
 .left-part__item-fifth:hover,
 .left-part__item-sixth:hover,
-.left-part__item-seventh:hover {
+.left-part__item-seventh:hover,.left-part__item-eights_ninth:hover {
   background-color: #ffe000;
 }
 
@@ -214,6 +217,9 @@ select {
   display: none;
 }
 .main_7 {
+  display: none;
+}
+.main_8_9 {
   display: none;
 }
 
